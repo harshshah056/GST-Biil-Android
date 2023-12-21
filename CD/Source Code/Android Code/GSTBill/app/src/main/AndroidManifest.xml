@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appi.gstbill">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GSTBill">
+        <activity android:name=".activity.developer"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity
+            android:name=".activity.HistoryDetail"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".Canvas.DisplayCanvas"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.history"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.customer_detail"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.bill"
+            android:parentActivityName=".activity.purchase" />
+        <activity
+            android:name=".activity.purchase"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.add_customer"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

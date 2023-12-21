@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.bill"
+    android:orientation="vertical"
+    android:background="@drawable/bg_other">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/above"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Name"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+        <!--&lt;!&ndash;-->
+
+
+
+
+        <!--<ImageView
+            android:id="@+id/img1"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="35dp"
+            android:src="@drawable/arrow">
+
+        </ImageView>-->
+        <Spinner
+            android:id="@+id/purchase_customerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+        </Spinner>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/black"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+
+
+        <Spinner
+            android:id="@+id/purchase_productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+        </Spinner>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/black"/>
+
+        <!--<com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="15dp"
+            android:layout_height="35dp"
+            android:src="@drawable/arrow">
+
+        </com.google.android.material.imageview.ShapeableImageView>-->
+
+        <!--</LinearLayout>-->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:hint="Product Quantity">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                android:id="@+id/purchase_quantity"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:hint="Product Price">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:focusable="false"
+                android:background="@android:color/transparent"
+                android:id="@+id/purchase_price"
+                android:text="100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:hint="Product GST">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:focusable="false"
+                android:background="@android:color/transparent"
+                android:id="@+id/purchase_gst"
+                android:text="10"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/purchase_rv_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:text="Add items"
+            style="@style/purchase_button"
+            android:id="@+id/purchase_additem">
+        </Button>
+        <Button
+            style="@style/purchase_button"
+            android:text="Finish"
+            android:id="@+id/purchase_finish">
+        </Button>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
